@@ -34,16 +34,16 @@ body {
 }
 
 .buttons-holder {
-  background-color: aqua;
   display: flex;
   flex-direction: row;
-  width: 80%;
   justify-content: center;
+  align-items: center;
 }
 
 .buttons-holder img {
-  height: 100px;
-  width: 100%;
+
+  max-width:300px;
+  max-height:200px;
   margin: 10px;
 }
 
