@@ -1,0 +1,26 @@
+name: LBO Prod Release to Firebase Workflow via Fastlane
+
+on:
+  push:
+  branches: [ master ] # comment-out to specify any branch. ex: master etc.
+
+  workflow_dispatch: # or manually from github actions tabs in Github
+
+  # trigger on tag creation
+  push:
+    tags:
+      - '*'
+jobs:
+  deploy:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Upload static files
+        uses: actions/upload-pages-artifact
+        
+      - name: Deploy
+        uses: actions/deploy-pages
