@@ -22,27 +22,9 @@ jobs:
 
       - name: "Checkout"
         uses: actions/checkout@v2
-        with:
-          persist-credentials: false
+      
+      - name: "jekyll"
+        uses: actions/jekyll-build-pages@v1
 
-      # 2. Partie spécifique à Sphinx (installation des
-      #    dépendances et génération de la doc)
-
-      - name: "Set up Python"
-        uses: actions/setup-python@v1
-        with:
-          python-version: 3.8
-
-      - name: "Install Python dependencies"
-        run: |
-          pip3 install setuptools
-          pip3 install sphinx sphinx-rtd-theme
-
-
-
-      # 3. Déploiement sur les Github Pages
-      - name: "Deploy Github Pages"
-        uses: JamesIves/github-pages-deploy-action@3.7.1
-        with:
-          BRANCH: gh-pages     # <- Branche sur laquelle seront commités les fichiers
-          FOLDER: build  # <- Dossier contenant notre documentation générée
+      - name: "upload"
+        uses: actions/upload-pages-artifact@v1
