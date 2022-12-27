@@ -1,26 +1,15 @@
-/*
-  SMALL SCREEN
-*/
-
-@media all and (max-width: 950px){
-
-  #portrait {
-    display: none;
-  }
-
-  .boxLeftCorps{
-    display: none;
-  }
-
-
-}
 
 /*
   GENERAL
 */
 
+:root {
+  --primaryColor: #022e0c; 
+}
+
 body {
   display: flex;
+  background-color: var(--primaryColor);
   flex-direction: column;
   font-family: 'Montserrat','Liberation Sans';
   width: auto;
@@ -30,6 +19,7 @@ body {
 
 .title{
   margin-left: 40px;
+  color: white;
   margin-right: 40px;
 }
 
@@ -52,33 +42,16 @@ body {
 }
 
 
-/*
-  CORPS
-*/
 
-.corps {
-  display: flex;
-  color: #003668;
-  padding: 0 10% 0 10%;
-  margin-top: 5%;
-  margin-bottom: 5%;
-  justify-content: center;
-  align-items: center;
-}
 
-.boxLeftCorps {
-  margin: auto 15% auto 0;
-}
+@media all and (min-width : 1224px){
+  /* Styles pour cette Media Queries */
+  */
 
-.sigle {
-  font-weight: 500;
-  font-size: 900%;
-  margin: auto;
-}
-
-.bg_vert_2 {
-  background-color: #0ceda3;
-  color: #003668;
-  padding-right: 8px;
+  .buttons-holder {
+    display: flex;
+    flex-direction: column;
   
+  }
 }
+
