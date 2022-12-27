@@ -4,14 +4,8 @@ on:
   push:
   branches: [ master ] # comment-out to specify any branch. ex: master etc.
 
-  workflow_dispatch: # or manually from github actions tabs in Github
-
-  # trigger on tag creation
-  push:
-    tags:
-      - '*'
 jobs:
-  deploy:
+  build:
 
     runs-on: ubuntu-latest
 
