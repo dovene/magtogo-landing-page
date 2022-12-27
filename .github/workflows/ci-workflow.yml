@@ -13,8 +13,6 @@ jobs:
       - name: Checkout the code
         uses: actions/checkout@v2
 
-      - name: Upload
-        run: actions/upload-pages-artifact 
 
       - name: deploy
         run: actions/deploy-pages 
