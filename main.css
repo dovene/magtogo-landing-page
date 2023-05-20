@@ -34,7 +34,8 @@ body {
 
   max-width:300px;
   max-height:200px;
-  margin: 10px;
+  margin-left: 4px;
+  margin-right: 4px;
 }
 
 .phone img {
@@ -42,7 +43,29 @@ body {
 }
 
 
+a:link {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: none;
+}
 
+a:visited {
+  color: pink;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+}
 
 @media all and (min-width : 1224px){
   /* Styles pour cette Media Queries */
